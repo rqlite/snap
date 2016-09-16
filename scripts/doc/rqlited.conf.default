@@ -1,0 +1,6 @@
+#
+# This file is read from /var/snap/rqlite/common/rqlited.conf and used to
+# describe a set of rqlited instances to launch or stop.
+#
+# instance  service         raft
+  default   localhost:4001  :4002

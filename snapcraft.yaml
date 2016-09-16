@@ -1,0 +1,34 @@
+name: rqlite
+version: 3.5.0+git
+summary: A distributed relational database built on SQLite
+description: |
+  rqlite provides a relational data store that is highly available across a
+  cluster of nodes.
+
+  rqlite is written in Go and uses Raft to achieve consensus
+  across all the instances of the SQLite databases. rqlite ensures that
+  every change made to the system is made to a quorum of SQLite databases,
+  or none at all. It also gracefully handles leader elections, and tolerates
+  failures of machines, including the leader.
+confinement: strict
+grade: stable
+
+
+apps:
+  rqlite:
+    command: bin/rqlite
+    plugs: [ home, network-bind ]
+  rqlited:
+    command: bin/rqlited
+    plugs: [ home, network-bind ]
+  launch:
+    command: bin/snap-launch.py
+    plugs: [ network-bind ]
+
+parts:
+  rqlite:
+    plugin: go
+    source: https://github.com/rqlite/rqlite.git
+  scripts:
+    plugin: dump
+    source: scripts
