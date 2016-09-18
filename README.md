@@ -18,6 +18,17 @@ To build this snap:
   snapcraft
 ```
 
+To install this snap (unsigned) after building:
+
+```
+  sudo snap install --force-dangerous rqlite_<version>.snap
+```
+
 ## TODO
 
+ * pid file handling
+ * stopping rqlited
+ * join and leave
  * store the cluster name in its data (so can just -join address:port)
+
+
