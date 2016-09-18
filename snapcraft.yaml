@@ -22,7 +22,9 @@ apps:
     command: bin/rqlited
     plugs: [ home, network-bind ]
   launch:
-    command: bin/snap-launch.py
+    daemon: forking
+    command: bin/snap-launch.py start
+    stop-command: bin/snap-launch.py stop
     plugs: [ network-bind ]
 
 parts:
