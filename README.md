@@ -12,7 +12,7 @@ tolerates failures of machines, including the leader.
 To build this snap:
 
 ```
-  git clone https://github.com/markshuttle/rqlite-snap.git
+  git clone https://github.com/rqlite/snap.git
   cd snap
   snapcraft
 ```
