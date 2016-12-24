@@ -13,7 +13,7 @@ To build this snap:
 
 ```
   git clone https://github.com/markshuttle/rqlite-snap.git
-  cd rqlite-snap
+  cd snap
   snapcraft
 ```
 
