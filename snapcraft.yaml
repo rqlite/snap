@@ -1,15 +1,14 @@
 name: rqlite
-version: 3.5.0+git
-summary: A distributed relational database built on SQLite
+version: 3.8.0+git
+summary: The lightweight, distributed relational database built on SQLite
 description: |
-  rqlite provides a relational data store that is highly available across a
-  cluster of nodes.
+  rqlite provides a lightweight, distributed relational database.
 
-  rqlite is written in Go and uses Raft to achieve consensus
-  across all the instances of the SQLite databases. rqlite ensures that
-  every change made to the system is made to a quorum of SQLite databases,
-  or none at all. It also gracefully handles leader elections, and tolerates
-  failures of machines, including the leader.
+  rqlite is written in Go and uses Raft to achieve consensus across all
+  the instances of the SQLite databases. rqlite ensures that every change
+  made to the system is made to a quorum of SQLite databases, or none at
+  all. It also gracefully handles leader elections, and tolerates failures
+  of machines, including the leader.
 confinement: strict
 grade: stable
 
@@ -31,6 +30,7 @@ parts:
   rqlite:
     plugin: go
     source: https://github.com/rqlite/rqlite.git
+    source-tag: v3.8.0
   scripts:
     plugin: dump
     source: scripts
