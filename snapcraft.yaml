@@ -1,5 +1,5 @@
 name: rqlite
-version: 3.8.0+git
+version: 3.9.0+git
 summary: The lightweight, distributed relational database built on SQLite
 description: |
   rqlite provides a lightweight, distributed relational database.
@@ -30,7 +30,6 @@ parts:
   rqlite:
     plugin: go
     source: https://github.com/rqlite/rqlite.git
-    source-tag: v3.8.0
   scripts:
     plugin: dump
     source: scripts
